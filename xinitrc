@@ -38,7 +38,7 @@ fi
 
 /usr/scripts/refreshStatus.sh &
 
-feh --bg-scale /home/baldezh/assets/wallpaper/wallpaper2.jpg
+feh --bg-scale /home/baldezh/assets/wallpaper/wallpaper.jpg
 
 setxkbmap -layout us,ru -option "grp:ctrl_alt_toggle"
 redshift -O 5000
