@@ -1,0 +1,125 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/divider-workspaces",
+        "cpu",
+        "memory",
+        "custom/divider-usage",
+        "custom/updates",
+        "custom/weather",
+        "custom/divider-additional"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "custom/divider-netspeed",
+        "network#speed",
+        "custom/divider-sys",
+        "hyprland/language",
+        "backlight",
+        "pulseaudio",
+        "network#status",
+        "battery"
+    ],
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-focused": "{name}", // used for the active workspace
+        "format-occupied": "{name}", // workspaces with windows
+        "format-empty": "{name}", // empty workspaces
+        "all-outputs": true
+    },
+    "custom/divider-workspaces": {
+        "format": "",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "  {usage}% | {avg_frequency} GHz",
+        "interval": 1
+    },
+    "memory": {
+        "format": "  {percentage}%",
+        "interval": 1
+    },
+    "custom/divider-usage": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/updates": {
+        "format": "󰏗  {} 󰑖",
+        "exec": "~/.config/waybar/scripts/updates.sh",
+        "return-type": "string",
+        "interval": 1800,
+        "tooltip": "true",
+        "on-click": "alacritty -e sudo pacman -Syu && pkill -SIGUSR2 waybar"
+    },
+    "custom/weather": {
+        "interval": 600,
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "return-type": "json",
+        "tooltip": true
+    },
+    "custom/divider-additional": {
+        "format": "",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%a %d %b  %H:%M:%S}",
+        "interval": 1
+    },
+    "custom/divider-netspeed": {
+        "format": "",
+        "tooltip": false
+    },
+    "network#speed": {
+        "format": "↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
+        "interval": 1
+    },
+    "custom/divider-sys": {
+        "format": "",
+        "tooltip": false
+    },
+    "hyprland/language": {
+        "format": "{short} {variant}",
+        "interval": 1
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "min-brightness": 10,
+        "format": "  {percent}%"
+    },
+    "pulseaudio": {
+        "format": "  {volume}%",
+        "interval": 1
+    },
+    "network#status": {
+        "format-wifi": "  {essid} {signalStrength}%",
+        "format-ethernet": "",
+        "format-disconnected": "",
+        "interval": 1
+    },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "interval": 1,
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "states": {
+            "normal": 60,
+            "warning": 30,
+            "critical": 15
+        },
+        "events": {
+            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
+        }
+    }
+}
