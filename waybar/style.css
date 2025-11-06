@@ -4,131 +4,107 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.3);
+    background: transparent;
     color: #f8f8f2;
     font-weight: 500;
 }
 
-#workspaces {
-    padding: 3px 0;
-    padding-left: 11px;
-    background-color: rgba(174, 14, 206, 0.5);
+#custom-workspaces {
+    margin-top: 10px;
+    padding: 10px 0;
+    background: rgba(20, 20, 20, 0.8);
+    font-family: "IBM Plex Serif", "Symbols Nerd Font", sans-serif;
+    font-weight: normal;
+    font-size: 17px;
+    border: 1px solid rgba(100, 100, 100, 0.4);
+    border-radius: 10px;
 }
 
-#workspaces button {
-    transition-duration: 200ms;
-    transition-property: border-radius, opacity;
-    padding: 0 5px;
-    border-radius: 100%;
-    margin-right: 5px;
-    background-color: #35053f;
-    color: #bbbbbb;
-    opacity: 0.5;
+#custom-wsindex {
+    transition-duration: 400ms;
+    transition-property: margin;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+    margin-top: 16px;
+    margin-bottom: 7px;
+    padding-bottom: 8px;
     font-size: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: transparent;
 }
 
-#workspaces button.active {
-    opacity: 1;
-    border-radius: 20%;
+#custom-wsindex.w-0 {
+    margin-left: -40px;
+    margin-right: 14px;
 }
 
-#workspaces button.focus {
-    background-color: #35053f;
-    color: #bbbbbb;
+#custom-wsindex.w-1 {
+    margin-left: -76px;
+    margin-right: 45px;
 }
 
-#workspaces button:hover {
-    border-radius: 20%;
-    background-color: #35053f;
-    color: #bbbbbb;
+#custom-wsindex.w-2 {
+    margin-left: -123px;
+    margin-right: 81px;
 }
 
-#custom-divider-workspaces {
-    padding-left: 0.1px;
-    color: #ae0ece;
-    font-size: 26px;
-    opacity: 0.5;
-    background-color: #0ea4ce;
+#custom-wsindex.w-3 {
+    margin-left: -164px;
+    margin-right: 126px;
 }
 
-#cpu,
-#memory {
+#custom-wsindex.w-4 {
+    margin-left: -195px;
+    margin-right: 163px;
+}
+
+#custom-wsindex.w-5 {
+    margin-left: -222px;
+    margin-right: 196px;
+}
+
+#custom-wsindex.w-6 {
+    margin-left: -254px;
+    margin-right: 223px;
+}
+
+#custom-wsindex.w-7 {
+    margin-left: -288px;
+    margin-right: 259px;
+}
+
+#custom-wsindex.w-8 {
+    margin-left: -318px;
+    margin-right: 291px;
+}
+
+#custom-wsindex.w-9 {
+    margin-left: -344px;
+    margin-right: 320px;
+}
+
+#clock,
+#custom-performance,
+#custom-updates,
+#custom-weather,
+#network.speed,
+#language,
+#pulseaudio,
+#custom-wifi {
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 10px;
     padding: 0 10px;
-    background-color: rgba(14, 164, 206, 0.5);
-}
-
-#custom-divider-usage {
-    padding-left: 0.1px;
-    color: #0ea4ce;
-    font-size: 26px;
-    opacity: 0.5;
-    background-color: #18ce0e;
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(100, 100, 100, 0.4);
+    border-radius: 10px;
 }
 
 #custom-updates {
-    transition-duration: 200ms;
-    transition-property: margin-right;
-    margin-right: -25px;
     font-size: 17px;
+    padding-right: 15px;
 }
 
-#custom-updates:hover {
-    margin-right: 0;
-}
-
-#custom-updates,
-#custom-weather {
-    padding: 0 10px;
-    background-color: rgba(24, 206, 14, 0.5);
-}
-
-#custom-divider-additional {
-    padding-left: 0.1px;
-    color: #18ce0e;
-    font-size: 26px;
-    opacity: 0.5;
-}
-
-#custom-divider-netspeed {
-    color: #0ea4ce;
-    font-size: 26px;
-    opacity: 0.5;
-}
-
-#network.speed {
-    padding: 0 10px;
-    background-color: rgba(14, 164, 206, 0.5);
-}
-
-#custom-divider-sys {
-    color: #ae0ece;
-    font-size: 26px;
-    opacity: 0.5;
-    background-color: #0ea4ce;
-}
-
-#language,
-#backlight,
-#pulseaudio,
-#custom-wifi,
-#battery {
-    padding: 0 10px;
-    background-color: rgba(174, 14, 206, 0.5);
-}
-
-#battery {
-    padding-right: 11px;
-    color: #55ff55;
-}
-
-#battery.normal {
-    color: #ffff54;
-}
-
-#battery.warning {
-    color: #ffaa55;
-}
-
-#battery.critical {
-    color: #ff5555;
+#custom-wifi {
+    margin-right: 10px;
 }
