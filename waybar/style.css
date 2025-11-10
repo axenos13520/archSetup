@@ -34,53 +34,53 @@ window#waybar {
 }
 
 #custom-wsindex.w-0 {
-    margin-left: -40px;
-    margin-right: 14px;
+    margin-left: -45px;
+    margin-right: 19px;
 }
 
 #custom-wsindex.w-1 {
-    margin-left: -76px;
-    margin-right: 45px;
+    margin-left: -86px;
+    margin-right: 55px;
 }
 
 #custom-wsindex.w-2 {
-    margin-left: -123px;
-    margin-right: 81px;
+    margin-left: -135px;
+    margin-right: 96px;
 }
 
 #custom-wsindex.w-3 {
-    margin-left: -164px;
-    margin-right: 126px;
+    margin-left: -180px;
+    margin-right: 142px;
 }
 
 #custom-wsindex.w-4 {
-    margin-left: -195px;
-    margin-right: 163px;
+    margin-left: -215px;
+    margin-right: 183px;
 }
 
 #custom-wsindex.w-5 {
-    margin-left: -222px;
-    margin-right: 196px;
+    margin-left: -246px;
+    margin-right: 219px;
 }
 
 #custom-wsindex.w-6 {
-    margin-left: -254px;
-    margin-right: 223px;
+    margin-left: -282px;
+    margin-right: 251px;
 }
 
 #custom-wsindex.w-7 {
-    margin-left: -288px;
-    margin-right: 259px;
-}
-
-#custom-wsindex.w-8 {
-    margin-left: -318px;
+    margin-left: -319px;
     margin-right: 291px;
 }
 
+#custom-wsindex.w-8 {
+    margin-left: -354px;
+    margin-right: 326px;
+}
+
 #custom-wsindex.w-9 {
-    margin-left: -344px;
-    margin-right: 320px;
+    margin-left: -385px;
+    margin-right: 359px;
 }
 
 #clock,

@@ -3,7 +3,9 @@
 updates=$(checkupdates 2>/dev/null | wc -l)
 
 if [ "$updates" -eq 0 ]; then
-    echo "󰸞"
+    text="󰸞"
 else
-    echo "$updates"
+    text="$updates"
 fi
+
+echo "{\"text\": \"󰏗  $text\", \"tooltip\": \"click for 'pacman -Syu'\"}"

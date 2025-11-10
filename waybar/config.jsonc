@@ -26,12 +26,12 @@
         "format": "{}",
         "exec": "~/.config/waybar/scripts/performance.sh",
         "return-type": "json",
-        "interval": 1,
+        "interval": 1
     },
     "custom/updates": {
-        "format": "󰏗  {}",
+        "format": "{}",
         "exec": "~/.config/waybar/scripts/updates.sh",
-        "return-type": "string",
+        "return-type": "json",
         "interval": 1800,
         "tooltip": true,
         "on-click": "alacritty -e sudo pacman -Syu && pkill -SIGUSR2 waybar"
