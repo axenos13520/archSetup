@@ -1,0 +1,15 @@
+[color]
+; background = '#0c0b10'       ; deep near-black with a hint of warmth
+; foreground = '#c6b8a0'       ; soft warm beige for bar edges/text
+
+gradient = 1
+gradient_color_1 = '#3b2a35' ; dark muted wine
+gradient_color_2 = '#a05f3c' ; warm copper-brown
+gradient_color_3 = '#d28f5e' ; brighter warm amber highlight
+
+horizontal_gradient = 1
+horizontal_gradient_color_1 = '#2a2328' ; soft dark mauve
+horizontal_gradient_color_2 = '#6d3f27' ; roasted clay
+horizontal_gradient_color_3 = '#c97a4f' ; warm glowing ember
+
+blend_direction = 'up'
