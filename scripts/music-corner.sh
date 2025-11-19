@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 
-hyprctl dispatch workspace 10
+wait_for() {
+    while ! hyprctl clients -j | jq -e ".[] | select(.class==\"$1\")" >/dev/null; do
+        sleep 0.2
+    done
+}
 
-spotify &
+hyprctl dispatch workspace 10 >/dev/null
 
-hyprctl dispatch movecursor 1500 800
+spotify >/dev/null 2>&1 &
 
-sleep 1s
+wait_for "Spotify"
 
-easyeffects &
+foot --font "JetBrainsMono Nerd Font:size=6" -e cava >/dev/null 2>&1 &
 
-sleep 1s
+sleep 0.2
 
-foot --font "JetBrainsMono Nerd Font:size=6" -e cava &
+easyeffects >/dev/null 2>&1 &
