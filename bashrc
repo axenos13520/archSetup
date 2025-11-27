@@ -29,7 +29,3 @@ eval "$(pyenv init -)"
 if [[ $(ps -p $(ps -p $$ -o ppid=) -o args=) == "foot" ]]; then
     fastfetch
 fi
-
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    exec Hyprland
-fi
