@@ -1,0 +1,12 @@
+[Unit]
+Description=Spotify Accent Color Exporter (for Cava)
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/spotify_color_server.py
+Restart=on-failure
+RestartSec=2
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target
