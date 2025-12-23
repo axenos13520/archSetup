@@ -19,7 +19,7 @@ case "$COND" in
 *Rain* | *Drizzle* | *rain*) WEATHER="🌧️" ;;
 *Thunder* | *Storm*) WEATHER="⛈️" ;;
 *Snow* | *snow*) WEATHER="❄️" ;;
-*Fog* | *Mist*) WEATHER="🌫️" ;;
+*Fog* | *Mist* | *fog*) WEATHER="🌫️" ;;
 *) WEATHER="?" ;;
 esac
 

@@ -4,9 +4,9 @@
     "height": 30,
     "modules-left": [
         "clock",
-        "custom/performance",
         "custom/updates",
-        "custom/weather"
+        "custom/weather",
+        "custom/performance"
     ],
     "modules-center": [
         "custom/workspaces",
@@ -14,9 +14,11 @@
     ],
     "modules-right": [
         "network#speed",
+        "tray",
         "hyprland/language",
         "pulseaudio",
-        "custom/wifi"
+        "custom/wifi",
+        "battery"
     ],
     "clock": {
         "format": "{:%a %d %b  %H:%M:%S}",
@@ -55,6 +57,12 @@
         "format": "↓ {bandwidthDownBits} ↑ {bandwidthUpBits}",
         "interval": 1
     },
+    "tray": {
+        "icon-size": 21,
+        "show-passive-items": true,
+        "spacing": 10,
+        "reverse-direction": false
+    },
     "hyprland/language": {
         "format": "{short} {variant}",
         "interval": 1
@@ -68,5 +76,26 @@
         "return-type": "json",
         "tooltip": true,
         "interval": 1
+    },
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "interval": 1,
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "states": {
+            "normal": 60,
+            "warning": 30,
+            "critical": 15
+        },
+        "events": {
+            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
+            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
+        }
     }
 }
