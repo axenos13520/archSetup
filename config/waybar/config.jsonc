@@ -3,8 +3,8 @@
     "position": "top",
     "height": 30,
     "modules-left": [
+        "group/menu",
         "clock",
-        "custom/updates",
         "custom/weather",
         "custom/performance"
     ],
@@ -12,14 +12,35 @@
         "custom/workspaces",
         "custom/wsindex"
     ],
+    "group/audio": {
+        "drawer": {
+            "transition-duration": 250,
+            "children-class": "hidden",
+            "transition-left-to-right": false
+        },
+        "orientation": "inherit",
+        "modules": [
+            "pulseaudio",
+            "pulseaudio/slider"
+        ]
+    },
+    "group/info": {
+        "orientation": "inherit",
+        "modules": [
+            "hyprland/language",
+            "group/audio",
+            "custom/wifi",
+            "custom/lock"
+        ]
+    },
     "modules-right": [
         "network#speed",
         "tray",
-        "hyprland/language",
-        "pulseaudio",
-        "custom/wifi",
-        "battery"
+        "group/info"
     ],
+    "custom/power": {
+        "format": ""
+    },
     "clock": {
         "format": "{:%a %d %b  %H:%M:%S}",
         "interval": 1
@@ -45,7 +66,8 @@
         "tooltip": true
     },
     "custom/workspaces": {
-        "format": "      Ⅰ     Ⅱ     Ⅲ     Ⅳ    Ⅴ    Ⅵ    Ⅶ     Ⅷ     Ⅸ     Ⅹ     "
+        "format": "      Ⅰ     Ⅱ     Ⅲ     Ⅳ    Ⅴ    Ⅵ    Ⅶ     Ⅷ     Ⅸ     Ⅹ     ",
+        "tooltip": false
     },
     "custom/wsindex": {
         "format": "  ",
@@ -69,7 +91,14 @@
     },
     "pulseaudio": {
         "format": "  {volume}%",
-        "interval": 1
+        "interval": 1,
+        "scroll-step": 5
+    },
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal",
+        "scroll-step": 5
     },
     "custom/wifi": {
         "exec": "~/.config/waybar/scripts/wifi.sh",
@@ -77,25 +106,9 @@
         "tooltip": true,
         "interval": 1
     },
-    "battery": {
-        "format": "{icon}  {capacity}%",
-        "format-charging": " {capacity}%",
-        "interval": 1,
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        "states": {
-            "normal": 60,
-            "warning": 30,
-            "critical": 15
-        },
-        "events": {
-            "on-discharging-warning": "notify-send -u normal 'Low Battery'",
-            "on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
-        }
+    "custom/lock": {
+        "format": "󰌾",
+        "tooltip": false,
+        "on-click": "hyprlock"
     }
 }
